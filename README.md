@@ -50,6 +50,10 @@ const SUPABASE_ANON_KEY = 'your-anon-key';
 - 실제 API 키는 절대 공개 저장소에 올리지 마세요.
 - Supabase의 Row Level Security (RLS) 정책이 올바르게 설정되어 있는지 확인하세요.
 
+**🚀 Vercel 배포 시:**
+- Vercel 환경 변수를 사용하여 Supabase 설정을 주입합니다.
+- 자세한 설정 방법은 [VERCEL_SETUP.md](VERCEL_SETUP.md)를 참고하세요.
+
 ### 3. 실행
 
 로컬에서 실행:

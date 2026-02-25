@@ -6,6 +6,9 @@ supabase-config.js
 .env.local
 .env.*.local
 
+# 빌드 생성 파일 (로컬에서만)
+# supabase-config.js는 빌드 시 생성되므로 .gitignore에 유지
+
 # 로그 파일
 *.log
 

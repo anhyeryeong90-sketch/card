@@ -15,10 +15,31 @@
 **배포 방법:**
 1. [Vercel](https://vercel.com)에 가입 (GitHub 계정으로 간편 가입)
 2. "New Project" 클릭
-3. GitHub 저장소 선택 또는 파일 드래그 앤 드롭
-4. 프로젝트 설정 (프레임워크: Other)
-5. "Deploy" 클릭
-6. 완료! 자동으로 URL 생성
+3. GitHub 저장소 선택
+4. 프로젝트 설정:
+   - Framework Preset: **Other**
+   - Build Command: `npm run build` (자동 감지됨)
+   - Output Directory: `.` (현재 디렉토리)
+5. **환경 변수 설정** (중요!):
+   - "Environment Variables" 섹션 클릭
+   - 다음 변수 추가:
+     - `SUPABASE_URL`: `https://your-project.supabase.co`
+     - `SUPABASE_ANON_KEY`: `your-anon-key`
+   - 또는 `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY` 사용 가능
+6. "Deploy" 클릭
+7. 완료! 자동으로 URL 생성
+
+**환경 변수 설정 방법:**
+1. Vercel 대시보드에서 프로젝트 선택
+2. Settings → Environment Variables
+3. 다음 변수 추가:
+   ```
+   SUPABASE_URL = https://pcrcmrpmlmpnhnmpoten.supabase.co
+   SUPABASE_ANON_KEY = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+   ```
+4. Environment: Production, Preview, Development 모두 선택
+5. Save 클릭
+6. 재배포 (자동 또는 수동)
 
 **GitHub 연동 시:**
 ```bash
