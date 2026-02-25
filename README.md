@@ -29,14 +29,26 @@
 
 1. [Supabase](https://supabase.com)에서 프로젝트 생성
 2. SQL Editor에서 `supabase-migration.sql` 파일의 내용 실행
-3. `supabase-config.js` 파일을 열어서 다음 정보를 입력:
+3. `supabase-config.example.js` 파일을 복사하여 `supabase-config.js`로 이름 변경
+4. `supabase-config.js` 파일을 열어서 다음 정보를 입력:
    - `SUPABASE_URL`: Supabase 프로젝트 URL
    - `SUPABASE_ANON_KEY`: Supabase Anon Key (Settings > API에서 확인)
 
+```bash
+# 예제 파일을 복사
+cp supabase-config.example.js supabase-config.js
+```
+
 ```javascript
+// supabase-config.js 파일 내용
 const SUPABASE_URL = 'https://your-project.supabase.co';
 const SUPABASE_ANON_KEY = 'your-anon-key';
 ```
+
+**⚠️ 보안 주의사항:**
+- `supabase-config.js` 파일은 `.gitignore`에 포함되어 있어 Git에 커밋되지 않습니다.
+- 실제 API 키는 절대 공개 저장소에 올리지 마세요.
+- Supabase의 Row Level Security (RLS) 정책이 올바르게 설정되어 있는지 확인하세요.
 
 ### 3. 실행
 
