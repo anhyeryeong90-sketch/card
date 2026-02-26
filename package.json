@@ -4,7 +4,8 @@
   "description": "카드 뒤집기 게임",
   "scripts": {
     "build": "node build-config.js",
-    "prebuild": "node build-config.js"
+    "prebuild": "node build-config.js",
+    "vercel-build": "node build-config.js"
   },
   "keywords": ["game", "card", "memory"],
   "author": "",
